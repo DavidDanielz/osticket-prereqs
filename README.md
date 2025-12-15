@@ -76,7 +76,7 @@ Provisioned a Windows 11 Pro virtual machine in Microsoft Azure and connected vi
   <img src="IIS & PHP Configuration.png" width="80%" alt="IIS and PHP Configuration"/>
 </p>
 <p>
-Installed and configured IIS with CGI support, registered PHP within IIS, and enabled required PHP extensions to meet osTicket application requirements.
+Configured IIS with CGI, registered PHP, and enabled required extensions for osTicket.
 </p>
 
 <br />
@@ -85,7 +85,7 @@ Installed and configured IIS with CGI support, registered PHP within IIS, and en
   <img src="osTicket installed.png" width="80%" alt="osTicket Installation"/>
 </p>
 <p>
-Deployed osTicket into the IIS web root, configured the database connection, completed the web-based installer, and verified successful operation.
+Deployed osTicket to IIS, configured the database, completed installation, and verified operation.
 </p>
 
 ---
