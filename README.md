@@ -1,51 +1,112 @@
 <p align="center">
-<img src="https://i.imgur.com/Clzj7Xs.png" alt="osTicket logo"/>
+  <img src="https://i.imgur.com/Clzj7Xs.png" alt="osTicket logo"/>
 </p>
 
-<h1>osTicket - Prerequisites and Installation</h1>
-This tutorial outlines the prerequisites and installation of the open-source help desk ticketing system osTicket.<br />
+<h1 align="center">osTicket Help Desk Deployment on Microsoft Azure</h1>
+<h3 align="center">End-to-End Help Desk System Implementation Using IIS, PHP, and MySQL</h3>
 
-<h2>Environments and Technologies Used</h2>
+<div align="center">
+  
+  ![Azure](https://img.shields.io/badge/Microsoft_Azure-0089D6?style=for-the-badge&logo=microsoft-azure&logoColor=white)
+  ![IIS](https://img.shields.io/badge/IIS-5E5E5E?style=for-the-badge)
+  ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+  ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+  ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
+  ![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white)
 
-- Microsoft Azure (Virtual Machines/Compute)
-- Remote Desktop
-- Internet Information Services (IIS)
+</div>
 
-<h2>Operating Systems Used </h2>
+---
 
-- Windows 11</b> (21H2)
+## 📋 Project Overview
 
-<h2>List of Prerequisites</h2>
-Before installing osTicket, we need to set up the foundation. osTicket is a PHP-based web application that requires:
+**Project Type:** Infrastructure Deployment & Application Implementation  
+**Status:** Complete and Fully Operational  
+**Business Use Case:** Centralized help desk ticketing system for managing IT support requests in a cloud-based environment
 
-- 1. A web server (IIS) to host the application
-- 2. A database (MySQL) to store tickets and user data
-- 3. PHP runtime to execute the application code
-- 4. Management tools to configure these components
-- 5. 
+This project demonstrates the complete deployment of **osTicket**, an open-source help desk ticketing system, hosted on **Microsoft Azure**. The implementation includes provisioning a Windows-based Azure Virtual Machine, configuring IIS with PHP support, deploying a MySQL database backend, and validating the system through end-user and administrator workflows.
 
-<h2>Installation Steps</h2>
+This project was completed as a **portfolio-ready implementation** designed to reflect real-world help desk and IT support environments.
+
+---
+
+## 🖥️ Environments & Technologies Used
+
+- Microsoft Azure (Virtual Machines)
+- Windows 11 Pro (Azure VM)
+- Internet Information Services (IIS) with CGI
+- PHP 7.3
+- MySQL 5.5
+- Remote Desktop Protocol (RDP)
+- PowerShell (administration & validation)
+
+---
+
+## ⚙️ osTicket Prerequisites
+
+Before installing osTicket, the following components were required and configured:
+
+1. Azure-hosted Windows Virtual Machine
+2. IIS web server with CGI enabled
+3. PHP runtime configured and registered in IIS
+4. MySQL database server for ticket storage
+5. Required PHP extensions (IMAP, Intl, OPcache)
+6. Proper file permissions and security configuration
+
+---
+
+## 🛠️ Installation & Configuration Steps
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Azure VM Creation"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Provisioned a Windows 11 Pro virtual machine in Microsoft Azure and connected via Remote Desktop to perform all installation and configuration tasks.
 </p>
+
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="IIS and PHP Configuration"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Installed and configured IIS with CGI support, registered PHP within IIS, and enabled required PHP extensions to meet osTicket application requirements.
 </p>
+
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="osTicket Installation"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Deployed osTicket into the IIS web root, configured the database connection, completed the web-based installer, and verified successful operation.
 </p>
-<br />
+
+---
+
+## 🎥 Demonstration
+
+- Verified end-user ticket submission via the osTicket user portal  
+- Logged into the staff control panel to manage and respond to tickets  
+- Confirmed database connectivity and persistent ticket storage  
+- Validated proper permissions and removed installation files post-deployment  
+
+**Admin Portal:**  
+`http://localhost/osTicket/scp/login.php`
+
+**End User Portal:**  
+`http://localhost/osTicket/`
+
+---
+
+## 🔐 Post-Deployment Cleanup & Security
+
+- Removed osTicket setup directory
+- Restricted permissions on `ost-config.php`
+- Verified IIS and PHP configuration stability
+
+---
+
+## ✅ Outcome
+
+The osTicket help desk system was successfully deployed in a cloud-hosted Azure environment and is fully functional for handling support requests. This project demonstrates practical skills in cloud infrastructure, Windows administration, web server configuration, and help desk system deployment.
