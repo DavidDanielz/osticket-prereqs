@@ -113,6 +113,17 @@ Deployed osTicket into the IIS web root, configured the database connection, com
 
 ---
 
+## 🧠 Skills Demonstrated
+
+- Azure Virtual Machine provisioning and management
+- IIS web server administration
+- PHP runtime installation and configuration
+- MySQL database deployment and validation
+- osTicket system deployment and testing
+- Basic system hardening and post-install cleanup
+- Troubleshooting dependencies and application issues
+
+
 ## ✅ Outcome
 
 The osTicket help desk system was successfully deployed in a cloud-hosted Azure environment and is fully functional for handling support requests. This project demonstrates practical skills in cloud infrastructure, Windows administration, web server configuration, and help desk system deployment.
