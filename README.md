@@ -26,12 +26,12 @@ Microsoft Azure Windows VM | IIS | PHP | MySQL
 ## 📋 Project Overview
 
 **Project Type:** Infrastructure Deployment & Application Implementation  
-**Status:** Complete and Fully Operational  
-**Business Use Case:** Centralized help desk ticketing system for managing IT support requests in a cloud-based environment
+**Status:** Complete and fully operational  
+**Business Use Case:** A cloud-based help desk system to manage IT support requests efficiently  
 
-This project demonstrates the complete deployment of **osTicket**, an open-source help desk ticketing system, hosted on **Microsoft Azure**. The implementation includes provisioning a Windows-based Azure Virtual Machine, configuring IIS with PHP support, deploying a MySQL database backend, and validating the system through end-user and administrator workflows.
+This project shows a full deployment of **osTicket**, an open-source help desk platform, running on **Microsoft Azure**. The setup involved creating a Windows-based Azure Virtual Machine, configuring IIS with PHP, setting up a MySQL database, and testing the system through both end-user and administrator workflows.  
 
-This project was completed as a **portfolio-ready implementation** designed to reflect real-world help desk and IT support environments.
+The project demonstrates practical skills in cloud infrastructure, web server setup, and help desk system management, reflecting a real-world IT support environment.
 
 ---
 
