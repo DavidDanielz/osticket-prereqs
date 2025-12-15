@@ -64,7 +64,7 @@ Before installing osTicket, the following components were required and configure
 ## 🛠️ Installation & Configuration Steps
 
 <p>
-  <img src="VM.png" width="80%" alt="Azure VM Creation"/>
+  <img src="vm.png" width="80%" alt="Azure VM Creation"/>
 </p>
 <p>
 Provisioned a Windows 11 Pro virtual machine in Microsoft Azure and connected via Remote Desktop to perform all installation and configuration tasks.
