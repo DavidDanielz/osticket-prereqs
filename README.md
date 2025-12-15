@@ -2,9 +2,8 @@
   <img src="https://i.imgur.com/Clzj7Xs.png" alt="osTicket logo"/>
 </p>
 
-<h1 align="center">
-osTicket Help Desk Deployment – Prerequisites & Installation on Azure
-</h1>
+<h1 align="center">osTicket Help Desk Deployment</h1>
+<h2 align="center">Prerequisites & Installation on Azure</h2>
 
 <h3 align="center">
 Microsoft Azure Windows VM | IIS | PHP | MySQL
