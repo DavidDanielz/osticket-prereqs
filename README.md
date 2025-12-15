@@ -2,8 +2,14 @@
   <img src="https://i.imgur.com/Clzj7Xs.png" alt="osTicket logo"/>
 </p>
 
-<h1 align="center">osTicket Help Desk Deployment on Microsoft Azure</h1>
-<h3 align="center">End-to-End Help Desk System Implementation Using IIS, PHP, and MySQL</h3>
+<h1 align="center">
+osTicket Help Desk Deployment – Prerequisites & Installation on Azure
+</h1>
+
+<h3 align="center">
+Microsoft Azure Windows VM | IIS | PHP | MySQL
+</h3>
+
 
 <div align="center">
   
