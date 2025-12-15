@@ -73,7 +73,7 @@ Provisioned a Windows 11 Pro virtual machine in Microsoft Azure and connected vi
 <br />
 
 <p>
-  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="IIS and PHP Configuration"/>
+  <img src="IIS & PHP Configuration.png" width="80%" alt="IIS and PHP Configuration"/>
 </p>
 <p>
 Installed and configured IIS with CGI support, registered PHP within IIS, and enabled required PHP extensions to meet osTicket application requirements.
