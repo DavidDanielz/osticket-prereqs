@@ -82,7 +82,7 @@ Installed and configured IIS with CGI support, registered PHP within IIS, and en
 <br />
 
 <p>
-  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="osTicket Installation"/>
+  <img src="osTicket installed.png" width="80%" alt="osTicket Installation"/>
 </p>
 <p>
 Deployed osTicket into the IIS web root, configured the database connection, completed the web-based installer, and verified successful operation.
