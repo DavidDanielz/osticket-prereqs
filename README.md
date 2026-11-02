@@ -62,10 +62,25 @@ All screenshots were captured **during execution** to demonstrate how the system
 
 ---
 
-### **Step 2: Connect via Remote Desktop**
-<img src="21.5 Proof of Connecting to VM .png" width="80%" alt="RDP Login"/>
+### Step 2: Connect via Remote Desktop
 
-Connect to the Azure virtual machine using Remote Desktop Protocol to begin configuration.
+**Goal:** Establish an RDP session to the Azure VM so configuration can begin.
+
+**Procedure:**
+
+1. In the Azure Portal, open the `osticket-vm` overview page.
+2. Click **Connect** → **RDP**.
+3. Click **Download RDP File**.
+4. Open the downloaded `.rdp` file.
+5. When prompted, enter the VM credentials:
+   - **Username:** `labadmin`
+   - **Password:** (the password set during VM creation)
+6. Accept the certificate warning if prompted (expected for a new VM).
+7. Wait for the Windows desktop to load.
+
+**Result:** An active Remote Desktop session showing the Windows 11 desktop of the Azure VM.
+
+![Connected to VM via RDP](images/step-02-rdp/step-02-rdp-connected.png)
 
 ---
 
