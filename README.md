@@ -84,10 +84,22 @@ All screenshots were captured **during execution** to demonstrate how the system
 
 ---
 
-### **Step 3: Download osTicket Installation Files**
-<img src="23. osTicket-installation-files (All).png" width="80%" alt="Download Files"/>
+### Step 3: Download osTicket Installation Files
 
-Download and extract the osTicket installation package and required components inside the virtual machine.
+**Goal:** Obtain the osTicket package and extract it inside the VM.
+
+**Procedure:**
+
+1. Inside the RDP session, open Microsoft Edge.
+2. Navigate to the osTicket releases page: `https://osticket.com/download/`.
+3. Download the latest **osTicket v1.x** `.zip` package.
+4. Once downloaded, right-click the `.zip` → **Extract All…**
+5. Set the destination to `C:\osticket-install\` and click **Extract**.
+6. Open the extracted folder and confirm you see the `upload` and `include` folders.
+
+**Result:** The osTicket files are extracted locally on the VM, ready for deployment.
+
+![osTicket installation files extracted](images/step-03-download/step-03-download-files.png)
 
 ---
 
