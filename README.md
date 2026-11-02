@@ -103,13 +103,26 @@ All screenshots were captured **during execution** to demonstrate how the system
 
 ---
 
-### **Step 4: Install IIS with CGI Enabled**
-<div style="display: flex; gap: 10px;">
-  <img src="29. Click IIS to World Wide Web Services .png" width="45%" alt="IIS Features"/>
-  <img src="30. Click IIS to WWWS to Application Development Features to check off CGI.png" width="45%" alt="CGI Enabled"/>
-</div>
+### Step 4: Install IIS with CGI Enabled
 
-Enable Internet Information Services (IIS) and select CGI under Application Development Features.
+**Goal:** Install Internet Information Services (IIS) with the CGI feature enabled so IIS can execute PHP.
+
+**Procedure:**
+
+1. Inside the RDP session, open **Server Manager**.
+2. Click **Add roles and features**.
+3. Click **Next** through the wizard until you reach **Server Roles**.
+4. Check **Web Server (IIS)** → click **Add Features** when prompted.
+5. Click **Next** through to **Role Services**.
+6. Expand **Application Development** and check **CGI**.
+7. Click **Next** → **Install**. Wait for the installation to complete.
+8. Click **Close** when finished.
+
+**Result:** IIS is installed with CGI enabled, ready to host PHP.
+
+![IIS role selected in Server Manager](images/step-04-iis/step-04-iis-role-selected.png)
+
+![CGI checked under Application Development Features](images/step-04-iis/step-04-iis-cgi-checked.png)
 
 ---
 
