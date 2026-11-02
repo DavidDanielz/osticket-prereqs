@@ -143,7 +143,7 @@ All screenshots were captured **during execution** to demonstrate how the system
 
 ![PHP Manager for IIS setup](images/step-05-iis-dependencies/step-05-php-manager-install.png.png)
 
-![IIS URL Rewrite Module 2 setup](images/step-05-iis-dependencies/step-05-url-rewrite-install.png)
+![IIS URL Rewrite Module 2 setup](images/step-05-iis-dependencies/step-05-url-rewrite-install.png.png)
 
 ---
 
