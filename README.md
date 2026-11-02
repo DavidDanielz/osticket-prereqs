@@ -126,13 +126,24 @@ All screenshots were captured **during execution** to demonstrate how the system
 
 ---
 
-### **Step 5: Install IIS Dependencies**
-<div style="display: flex; gap: 10px;">
-  <img src="32. PHP Manager for IIS setup.png" width="45%" alt="PHP Manager"/>
-  <img src="33. IIS URL Rewrite Module 2 Setup.png" width="45%" alt="URL Rewrite"/>
-</div>
+### Step 5: Install IIS Dependencies
 
-Install PHP Manager for IIS and the IIS URL Rewrite Module.
+**Goal:** Install PHP Manager for IIS and the IIS URL Rewrite Module — both required for osTicket to run correctly.
+
+**Procedure:**
+
+1. Inside the RDP session, download the **PHP Manager for IIS** installer.
+2. Run the installer → **Next** → accept the license → **Install** → **Finish**.
+3. Download the **IIS URL Rewrite Module 2** installer.
+4. Run the installer → accept the license → **Install** → **Finish**.
+5. Close and reopen **IIS Manager** (`inetmgr`) so the new modules load.
+6. Confirm **PHP Manager** appears in the IIS Manager home page.
+
+**Result:** Both dependencies are installed and PHP Manager is visible in IIS Manager.
+
+![PHP Manager for IIS setup](images/step-05-iis-dependencies/step-05-php-manager-install.png)
+
+![IIS URL Rewrite Module 2 setup](images/step-05-iis-dependencies/step-05-url-rewrite-install.png)
 
 ---
 
