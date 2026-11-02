@@ -58,7 +58,7 @@ All screenshots were captured **during execution** to demonstrate how the system
 
 **Result:** The VM is provisioned and running in Azure.
 
-![Azure VM created](images/step-01-azure-vm)
+![Azure VM created](images/step-01-azure-vm/step-01-azure-vm-created.png.png)
 
 ---
 
