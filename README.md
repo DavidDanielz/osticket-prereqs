@@ -36,10 +36,29 @@ All screenshots were captured **during execution** to demonstrate how the system
 
 ---
 
-### **Step 1: Provision Azure Virtual Machine**
-<img src="19. osTicket-VM created (Virtual machines).png" width="80%" alt="Azure VM Creation"/>
+### Step 1: Provision the Azure Virtual Machine
 
-Create a Windows 11 virtual machine in Microsoft Azure to host the osTicket environment.
+**Goal:** Create a Windows 11 VM in Microsoft Azure to host the osTicket environment.
+
+**Procedure:**
+
+1. Sign in to the [Azure Portal](https://portal.azure.com) and click **Create a resource**.
+2. Search for **Virtual Machine** and click **Create**.
+3. On the **Basics** tab, configure:
+   - **Resource group:** `osticket-lab-rg` (create new)
+   - **Virtual machine name:** `osticket-vm`
+   - **Region:** `(US) East US`
+   - **Image:** `Windows 11 Pro`
+   - **Size:** `Standard_B2s` (2 vCPU, 4 GiB)
+   - **Username:** `labadmin`
+   - **Password:** (strong password, saved securely)
+4. On the **Networking** tab, set **Inbound port rules** to allow **RDP (3389)**.
+5. Click **Review + create** → **Create**. Wait ~3–5 minutes for deployment.
+6. Confirm the VM shows **Running** on its overview page.
+
+**Result:** The VM is provisioned and running in Azure.
+
+![Azure VM created](images/step-01-azure-vm/step-01-azure-vm-created.png)
 
 ---
 
