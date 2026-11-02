@@ -99,7 +99,7 @@ All screenshots were captured **during execution** to demonstrate how the system
 
 **Result:** The osTicket files are extracted locally on the VM, ready for deployment.
 
-![osTicket installation files extracted](images/step-03-download/step-03-download-files.png)
+![osTicket installation files extracted](images/step-03-download/step-03-download-files.png.png)
 
 ---
 
