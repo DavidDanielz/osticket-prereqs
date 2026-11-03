@@ -166,10 +166,21 @@ All screenshots were captured **during execution** to demonstrate how the system
 
 ---
 
-### **Step 7: Install Microsoft Visual C++ Redistributable**
-<img src="40. Microsoft Visual C++ Install.png" width="80%" alt="VC++ Install"/>
+### Step 7: Install Microsoft Visual C++ Redistributable
 
-Install the Microsoft Visual C++ Redistributable required by PHP and MySQL.
+**Goal:** Install the Visual C++ Redistributable required by PHP and MySQL.
+
+**Procedure:**
+
+1. Inside the RDP session, download the **Microsoft Visual C++ Redistributable** installer (x64).
+2. Run the installer.
+3. Check **I agree to the license terms and conditions**.
+4. Click **Install**.
+5. Wait for setup to complete, then click **Close**.
+
+**Result:** The Visual C++ Redistributable is installed, satisfying the runtime dependency for PHP and MySQL.
+
+![Microsoft Visual C++ Redistributable installed](images/step-07-vcredist/step-07-vcredist-install.png.png)
 
 ---
 
