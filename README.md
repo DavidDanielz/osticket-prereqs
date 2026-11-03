@@ -228,16 +228,27 @@ All screenshots were captured **during execution** to demonstrate how the system
 
 ---
 
-### **Step 10: Deploy osTicket Application Files**
-<img src="52. Taking (upload) folder and adding it to the wwwroot folder.png" width="80%" alt="Initial Folder Structure"/>
+### Step 10: Deploy osTicket Application Files
 
-Move the `upload` directory from the extracted osTicket files into `C:\inetpub\wwwroot`.
+**Goal:** Copy the osTicket `upload` folder into IIS's web root and rename it to `osTicket`.
 
-<img src="53. upload in wwwroot.png" width="80%" alt="Upload Folder"/>
+**Procedure:**
 
-Rename the `upload` directory to `osTicket`.
+1. Inside the RDP session, open **File Explorer**.
+2. Navigate to the extracted osTicket folder (from Step 3).
+3. Copy the `upload` folder.
+4. Paste it into `C:\inetpub\wwwroot\`.
+5. Confirm `C:\inetpub\wwwroot\upload\` now exists.
+6. Right-click the `upload` folder → **Rename** → change it to `osTicket`.
+7. Confirm the path is now `C:\inetpub\wwwroot\osTicket\`.
 
-<img src="54. Change upload name to osTicket.png" width="80%" alt="Renamed Folder"/>
+**Result:** osTicket application files are deployed at `C:\inetpub\wwwroot\osTicket\`, ready for the web installer.
+
+![Copying the upload folder to wwwroot](images/step-10-deploy-files/step-10-upload-to-wwwroot.png.png)
+
+![Upload folder present in wwwroot](images/step-10-deploy-files/step-10-upload-in-wwwroot.png.png)
+
+![Renaming upload to osTicket](images/step-10-deploy-files/step-10-rename-to-osticket.png.png)
 
 ---
 
