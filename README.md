@@ -370,9 +370,20 @@ All screenshots were captured **during execution** to demonstrate how the system
 
 ---
 
-### **Step 16: Verify End-User Portal**
-<img src="91. Support center_Support ticket system .png" width="80%" alt="End User Portal"/>
+### Step 16: Verify End-User Portal
 
-Confirm the osTicket support portal loads and is ready to accept tickets.
+**Goal:** Confirm the osTicket support portal loads correctly and can accept tickets.
+
+**Procedure:**
+
+1. Inside the RDP session, open Microsoft Edge.
+2. Navigate to `http://localhost/osTicket/`.
+3. Confirm the **Support Center** page loads with the help desk name shown.
+4. Click **Open a New Ticket** and confirm the ticket submission form appears.
+5. (Optional) Navigate to `http://localhost/osTicket/scp/` and log in with the admin account to confirm the staff control panel loads.
+
+**Result:** The osTicket support portal and staff control panel are both accessible, confirming a complete and working installation.
+
+![osTicket support center portal](images/step-16-support-portal/step-16-support-portal.png.png)
 
 ---
