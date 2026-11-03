@@ -387,3 +387,22 @@ All screenshots were captured **during execution** to demonstrate how the system
 ![osTicket support center portal](images/step-16-support-portal/step-16-support-portal.png.png)
 
 ---
+
+## Troubleshooting
+
+- **PHP extensions not loading in the installer** — ensure the `extension=` lines in `C:\PHP\php.ini` are uncommented, then run `iisreset`. PHP Manager's "Enable or disable an extension" does the same thing.
+- **"Database connection failed" in the installer** — verify the `osticket` user was created with `GRANT ALL PRIVILEGES ON osticket.*` and that the password in the installer matches what you set in HeidiSQL.
+- **HTTP 500 error when opening osTicket** — usually a missing extension or an incorrect `php-cgi.exe` registration; re-check Step 9 and Step 12.
+
+---
+
+## Skills Demonstrated
+
+- Microsoft Azure VM provisioning and networking
+- Windows 11 / IIS administration
+- PHP installation and configuration with PHP Manager
+- MySQL Server installation and database/user creation via HeidiSQL
+- Web application deployment (osTicket) and troubleshooting
+- Technical documentation with step-by-step reproduction instructions
+
+---
