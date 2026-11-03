@@ -310,17 +310,32 @@ All screenshots were captured **during execution** to demonstrate how the system
 
 ---
 
-### **Step 13a: Installer Database Requirement**
-<img src="76. osTicket system_admin user_database settings basic installation setup.png" width="80%" alt="Database Required"/>
+### Step 14: Create Database with HeidiSQL
 
-The installer requires database credentials before installation can proceed.
+**Goal:** Create the `osticket` database and a dedicated database user via HeidiSQL, so the installer can connect to MySQL.
 
----
+**Procedure:**
 
-### **Step 14: Create Database with HeidiSQL**
-<img src="87. Refresh osTicket in HeidiSQL and see that it's not emoty anymore.png" width="80%" alt="HeidiSQL Database"/>
+1. Inside the RDP session, launch **HeidiSQL**.
+2. In the session manager, create a new session:
+   - **Hostname / IP:** `127.0.0.1`
+   - **User:** `root`
+   - **Password:** (the MySQL root password set in Step 8)
+   - **Port:** `3306`
+3. Click **Open** to connect.
+4. In the query tab, run:
+   ```sql
+   CREATE DATABASE osticket;
+   CREATE USER 'osticket'@'localhost' IDENTIFIED BY 'Str0ngP@ssw0rd!';
+   GRANT ALL PRIVILEGES ON osticket.* TO 'osticket'@'localhost';
+   FLUSH PRIVILEGES;
+   ```
+5. Right-click the left pane → **Refresh**.
+6. Confirm the **osticket** database now appears in the tree.
 
-Create the osTicket database and database user using HeidiSQL.
+**Result:** The `osticket` database exists and the `osticket` user has full privileges on it, ready for the installer.
+
+![HeidiSQL showing osticket database created](images/step-14-heidisql-db/step-14-heidisql-tables-created.png.png)
 
 ---
 
