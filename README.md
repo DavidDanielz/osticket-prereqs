@@ -206,11 +206,25 @@ All screenshots were captured **during execution** to demonstrate how the system
 
 ---
 
-### **Step 9: Register PHP in IIS**
-<img src="44. Click PHP Manager in IIS.png" width="80%" alt="PHP Manager"/>
-<img src="47. Register new PHP version.png" width="80%" alt="Register PHP"/>
+### Step 9: Register PHP in IIS
 
-Use PHP Manager in IIS to register `php-cgi.exe` and apply the configuration.
+**Goal:** Register PHP with IIS via PHP Manager so IIS can execute `.php` files.
+
+**Procedure:**
+
+1. Inside the RDP session, open **IIS Manager** (`inetmgr`).
+2. Click the server name in the left tree.
+3. In the center pane, double-click **PHP Manager**.
+4. Click **Register new PHP version**.
+5. In the dialog, click the **`…`** button and browse to `C:\PHP\php-cgi.exe`.
+6. Click **OK** to register.
+7. Confirm the PHP version now appears in PHP Manager.
+
+**Result:** PHP 7.3.8 is registered with IIS and listed in PHP Manager.
+
+![PHP Manager opened in IIS](images/step-09-register-php/step-09-php-manager-open.png.png)
+
+![Registering php-cgi.exe as new PHP version](images/step-09-register-php/step-09-register-php-version.png.png)
 
 ---
 
