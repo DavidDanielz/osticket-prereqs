@@ -290,10 +290,23 @@ All screenshots were captured **during execution** to demonstrate how the system
 
 ---
 
-### **Step 13: Configure osTicket Configuration File**
-<img src="69. Advanced Security settings for ost-config.php.png" width="80%" alt="Config Permissions"/>
+### Step 13: Configure osTicket Configuration File
 
-Rename `ost-sampleconfig.php` to `ost-config.php` and assign temporary write permissions.
+**Goal:** Create osTicket's configuration file and give IIS temporary write access so the installer can populate it.
+
+**Procedure:**
+
+1. Inside the RDP session, open File Explorer and navigate to `C:\inetpub\wwwroot\osTicket\include\`.
+2. Locate `ost-sampleconfig.php`.
+3. Rename it to `ost-config.php`.
+4. Right-click `ost-config.php` → **Properties** → **Security** → **Advanced**.
+5. Click **Change** next to Owner → set the owner to `Administrators`.
+6. In the permissions list, grant **Full control** to `Users` (temporary, for the installer).
+7. Click **OK** on each dialog to apply.
+
+**Result:** `ost-config.php` exists and is writable by IIS, allowing the installer to write database credentials into it.
+
+![Advanced Security settings for ost-config.php](images/step-13-config-file/step-13-config-permissions.png.png)
 
 ---
 
