@@ -252,10 +252,20 @@ All screenshots were captured **during execution** to demonstrate how the system
 
 ---
 
-### **Step 11: Launch osTicket Web Installer**
-<img src="58. osTicket installer Prerequisites with missing some extensions.png" width="80%" alt="Installer Prerequisites"/>
+### Step 11: Launch osTicket Web Installer
 
-Access the osTicket installer through a web browser and review prerequisite warnings.
+**Goal:** Open the osTicket setup page in a browser and review the prerequisite checks.
+
+**Procedure:**
+
+1. Inside the RDP session, open Microsoft Edge.
+2. Navigate to `http://localhost/osTicket/setup/`.
+3. Review the **Prerequisites** list shown on the page.
+4. Note any items marked as **failed** or **missing** (e.g. PHP extensions) — these will be fixed in Step 12.
+
+**Result:** The osTicket installer page loads and displays the prerequisite checklist, with warnings visible for items needing correction.
+
+![osTicket installer prerequisites with warnings](images/step-11-web-installer/step-11-installer-prereqs-warnings.png.png)
 
 ---
 
