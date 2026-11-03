@@ -184,10 +184,25 @@ All screenshots were captured **during execution** to demonstrate how the system
 
 ---
 
-### **Step 8: Install MySQL Server**
-<img src="41. Install MySQL Server 5.5.png" width="80%" alt="MySQL Install"/>
+### Step 8: Install MySQL Server
 
-Install MySQL Server to serve as the backend database for osTicket.
+**Goal:** Install MySQL Server to serve as the backend database for osTicket.
+
+**Procedure:**
+
+1. Inside the RDP session, download the **MySQL Server 5.5** installer.
+2. Run the installer and click **Next** through the welcome screen.
+3. Accept the license agreement → **Next**.
+4. Choose **Typical** setup type → **Install**.
+5. Wait for installation to complete → **Next** → **Finish**.
+6. When the configuration wizard launches, select **Standard Configuration** → **Next**.
+7. Check **Install As Windows Service** (leave the default service name `MySQL`) → **Next**.
+8. Set a **root password** (save it — needed later for HeidiSQL) → **Next** → **Execute**.
+9. Click **Finish** once configuration completes.
+
+**Result:** MySQL Server is installed, running as a Windows service, with a known root password.
+
+![MySQL Server 5.5 installed](images/step-08-mysql/step-08-mysql-install.png.png)
 
 ---
 
