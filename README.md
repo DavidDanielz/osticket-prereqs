@@ -269,10 +269,24 @@ All screenshots were captured **during execution** to demonstrate how the system
 
 ---
 
-### **Step 12: Configure PHP Extensions**
-<img src="63. Refresh osTicket installer page and extensions are added. .png" width="80%" alt="Extensions Enabled"/>
+### Step 12: Configure PHP Extensions
 
-Enable required PHP extensions and refresh the installer until all prerequisites pass.
+**Goal:** Enable the PHP extensions required by osTicket so all installer prerequisites pass.
+
+**Procedure:**
+
+1. Inside the RDP session, open **IIS Manager** → **PHP Manager**.
+2. Click **Enable or disable an extension**.
+3. Enable the extensions osTicket requires (typically `php_imap.dll`, `php_intl.dll`, `php_ldap.dll`, `php_mbstring.dll`, `php_openssl.dll`, and `php_gd2.dll`).
+4. Click **Apply**.
+5. Alternatively, edit `C:\PHP\php.ini` directly: uncomment the matching `extension=…` lines (remove the leading `;`).
+6. Restart IIS: open an elevated Command Prompt and run `iisreset`.
+7. Return to the browser and refresh `http://localhost/osTicket/setup/`.
+8. Confirm all prerequisites now show as **passed** (green).
+
+**Result:** All required PHP extensions are enabled and the installer's prerequisite checklist passes.
+
+![osTicket installer after refreshing — extensions enabled](images/step-12-php-extensions/step-12-extensions-enabled.png.png)
 
 ---
 
