@@ -339,10 +339,34 @@ All screenshots were captured **during execution** to demonstrate how the system
 
 ---
 
-### **Step 15: Complete Browser-Based Installation**
-<img src="90. osTicket installed.png" width="80%" alt="Installation Complete"/>
+### Step 15: Complete Browser-Based Installation
 
-Complete the osTicket installation and verify successful setup.
+**Goal:** Finish the osTicket installer by supplying help desk settings and database credentials.
+
+**Procedure:**
+
+1. Return to the browser at `http://localhost/osTicket/setup/`.
+2. Scroll to the **System Settings** section and fill in:
+   - **Helpdesk Name:** `osTicket Lab`
+   - **Default Email:** your admin email address
+3. Scroll to the **Admin User** section and fill in:
+   - **First Name / Last Name**
+   - **Email Address**
+   - **Username:** `system_admin`
+   - **Password:** (strong password, saved securely)
+4. Scroll to the **Database Settings** section and enter:
+   - **MySQL Hostname:** `localhost`
+   - **MySQL Database:** `osticket`
+   - **MySQL Username:** `osticket`
+   - **MySQL Password:** (the password set in Step 14)
+5. Click **Install Now**.
+6. Wait for the installer to finish, then confirm the success page appears.
+
+**Result:** osTicket is installed successfully and the admin account and database are configured.
+
+![osTicket installer form filled with admin and database settings](images/step-15-install-complete/step-15-installer-form-filled.png.png)
+
+![osTicket installation success page](images/step-15-install-complete/step-15-install-success.png.png)
 
 ---
 
