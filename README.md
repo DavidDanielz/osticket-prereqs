@@ -147,10 +147,22 @@ All screenshots were captured **during execution** to demonstrate how the system
 
 ---
 
-### **Step 6: Install PHP Runtime**
-<img src="38. Extract_Select Destination_C to PHP.png" width="80%" alt="PHP Install"/>
+### Step 6: Install PHP Runtime
 
-Create the `C:\PHP` directory and extract PHP 7.3.8 to this location.
+**Goal:** Install PHP 7.3.8 to `C:\PHP` so IIS can execute PHP scripts.
+
+**Procedure:**
+
+1. Inside the RDP session, create the folder `C:\PHP`.
+2. Download the **PHP 7.3.8 (x64) Non-Thread-Safe** ZIP from `windows.php.net/downloads/releases/archives/`.
+3. Right-click the ZIP → **Extract All…**
+4. Set the destination to `C:\PHP` and click **Extract**.
+5. Confirm `C:\PHP\php-cgi.exe` exists (this is the binary IIS will call).
+6. Copy `php.ini-production` to `php.ini` in the same folder.
+
+**Result:** PHP 7.3.8 is extracted to `C:\PHP` with a working `php.ini`.
+
+![PHP 7.3.8 extracted to C:\PHP](images/step-06-php-runtime/step-06-php-extract.png.png)
 
 ---
 
