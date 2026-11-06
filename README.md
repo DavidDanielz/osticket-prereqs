@@ -59,6 +59,14 @@ All screenshots were captured **during execution** to demonstrate how the system
 **Result:** The VM is provisioned and running in Azure.
 
 ![Azure VM created](images/step-01-azure-vm/step-01-azure-vm-created.png.png)
+![Azure VM Basics Tab](images/step-01-azure-vm/step-01-basics-tab.png.png)
+![Resource Group](images/step-01-azure-vm/step-01-resource-group.png.png)
+![VM Name](images/step-01-azure-vm/step-01-vm-name.png.png)
+![Region](images/step-01-azure-vm/step-01-region.png.png)
+![Image](images/step-01-azure-vm/step-01-image.png.png)
+![Size](images/step-01-azure-vm/step-01-size.png.png)
+![Admin Account](images/step-01-azure-vm/step-01-admin-account.png.png)
+![Deployment Complete](images/step-01-azure-vm/step-01-deployment-complete.png.png)
 
 ---
 
