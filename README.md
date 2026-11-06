@@ -88,7 +88,9 @@ All screenshots were captured **during execution** to demonstrate how the system
 
 **Result:** An active Remote Desktop session showing the Windows 11 desktop of the Azure VM.
 
-![Connected to VM via RDP](images/step-02-rdp/step-02-rdp-connected.png.png)
+![Connected to VM via RDP](images/step-02-rdp/step-02-rdp-connection.png.png)
+![Public IP Address RDP Connection](images/step-02-rdp/step-02-rdp-connected.png.png)
+![Proof of Connecting to VM](images/step-02-rdp/step-02-windows-desktop.png.png)
 
 ---
 
