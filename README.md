@@ -45,12 +45,12 @@ All screenshots were captured **during execution** to demonstrate how the system
 1. Sign in to the [Azure Portal](https://portal.azure.com) and click **Create a resource**.
 2. Search for **Virtual Machine** and click **Create**.
 3. On the **Basics** tab, configure:
-   - **Resource group:** `osticket-lab-rg` (create new)
-   - **Virtual machine name:** `osticket-vm`
-   - **Region:** `(US) East US`
+   - **Resource group:** `osTicket` (create new)
+   - **Virtual machine name:** `osTicket-VM`
+   - **Region:** `(US) East US 2`
    - **Image:** `Windows 11 Pro`
-   - **Size:** `Standard_B2s` (2 vCPU, 4 GiB)
-   - **Username:** `labadmin`
+   - **Size:** `Standard_D2s_v3` (2 vCPU, 8 GiB)
+   - **Username:** `labuser`
    - **Password:** (strong password, saved securely)
 4. On the **Networking** tab, set **Inbound port rules** to allow **RDP (3389)**.
 5. Click **Review + create** → **Create**. Wait ~3–5 minutes for deployment.
@@ -76,12 +76,12 @@ All screenshots were captured **during execution** to demonstrate how the system
 
 **Procedure:**
 
-1. In the Azure Portal, open the `osticket-vm` overview page.
+1. In the Azure Portal, open the `osTicket-VM` overview page.
 2. Click **Connect** → **RDP**.
 3. Click **Download RDP File**.
 4. Open the downloaded `.rdp` file.
 5. When prompted, enter the VM credentials:
-   - **Username:** `labadmin`
+   - **Username:** `labuser`
    - **Password:** (the password set during VM creation)
 6. Accept the certificate warning if prompted (expected for a new VM).
 7. Wait for the Windows desktop to load.
@@ -102,9 +102,9 @@ All screenshots were captured **during execution** to demonstrate how the system
 
 1. Inside the RDP session, open Microsoft Edge.
 2. Navigate to the osTicket releases page: `https://osticket.com/download/`.
-3. Download the latest **osTicket v1.x** `.zip` package.
+3. Download the latest **osTicket v1.15.8** `.zip` package.
 4. Once downloaded, right-click the `.zip` → **Extract All…**
-5. Set the destination to `C:\osticket-install\` and click **Extract**.
+5. Set the destination to `C:\Users\labuser\Downloads\osTicket-Installation-Files\` and click **Extract**.
 6. Open the extracted folder and confirm you see the `upload` and `include` folders.
 
 **Result:** The osTicket files are extracted locally on the VM, ready for deployment.
@@ -122,14 +122,12 @@ All screenshots were captured **during execution** to demonstrate how the system
 
 **Procedure:**
 
-1. Inside the RDP session, open **Server Manager**.
-2. Click **Add roles and features**.
-3. Click **Next** through the wizard until you reach **Server Roles**.
-4. Check **Web Server (IIS)** → click **Add Features** when prompted.
-5. Click **Next** through to **Role Services**.
-6. Expand **Application Development** and check **CGI**.
-7. Click **Next** → **Install**. Wait for the installation to complete.
-8. Click **Close** when finished.
+1. Inside the RDP session, open the Start menu and search for **Control Panel**.
+2. Navigate to **Programs** → **Turn Windows features on or off**.
+3. Check the box for **Internet Information Services**.
+4. Expand **Internet Information Services** → **World Wide Web Services** → **Application Development Features**.
+5. Check the box for **CGI**.
+6. Click **OK** and wait for Windows to apply the changes.
 
 **Result:** IIS is installed with CGI enabled, ready to host PHP.
 
