@@ -189,14 +189,25 @@ All screenshots were captured **during execution** to demonstrate how the system
 
 **Procedure:**
 
-1. Inside the RDP session, create the folder `C:\PHP`.
-2. Download the **PHP 7.3.8 (x64) Non-Thread-Safe** ZIP from `windows.php.net/downloads/releases/archives/`.
-3. Right-click the ZIP → **Extract All…**
-4. Set the destination to `C:\PHP` and click **Extract**.
-5. Confirm `C:\PHP\php-cgi.exe` exists (this is the binary IIS will call).
-6. Copy `php.ini-production` to `php.ini` in the same folder.
+1. Inside the RDP session, open File Explorer and navigate to the `C:` drive.
+2. Create a new folder named `PHP`.
+3. Download the **PHP 7.3.8 (x64) Non-Thread-Safe** ZIP from `windows.php.net/downloads/releases/archives/`.
+4. Right-click the ZIP → **Extract All…**
+5. Set the destination to `C:\PHP` and click **Extract**.
+6. Confirm `C:\PHP\php-cgi.exe` exists (this is the binary IIS will call).
+7. Copy `php.ini-production` to `php.ini` in the same folder.
 
 **Result:** PHP 7.3.8 is extracted to `C:\PHP` with a working `php.ini`.
+
+![Create PHP Folder](images/step-06-php-runtime/step-06-create-folder.png.png)
+
+![PHP Folder Created](images/step-06-php-runtime/step-06-php-folder.png.png)
+
+![Extract PHP ZIP](images/step-06-php-runtime/step-06-extract-start.png.png)
+
+![Select Destination C:\PHP](images/step-06-php-runtime/step-06-extract-destination.png.png)
+
+![PHP Folder Contents](images/step-06-php-runtime/step-06-php-contents.png.png)
 
 ![PHP 7.3.8 extracted to C:\PHP](images/step-06-php-runtime/step-06-php-extract.png.png)
 
