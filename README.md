@@ -135,6 +135,18 @@ All screenshots were captured **during execution** to demonstrate how the system
 
 ![CGI checked under Application Development Features](images/step-04-iis/step-04-iis-cgi-checked.png.png)
 
+![Search for Control Panel](images/step-04-iis/step-04-search-control-panel.png.png)
+
+![Click Uninstall a program](images/step-04-iis/step-04-click-programs.png.png)
+
+![Turn Windows features on or off](images/step-04-iis/step-04-turn-features-on.png.png)
+
+![Check Internet Information Services](images/step-04-iis/step-04-iis-checked.png.png)
+
+![Check CGI](images/step-04-iis/step-04-iis-cgi-checked.png.png)
+
+![Windows completed the requested changes](images/step-04-iis/step-04-install-complete.png.png)
+
 ---
 
 ### Step 5: Install IIS Dependencies
