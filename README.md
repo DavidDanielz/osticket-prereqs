@@ -59,13 +59,21 @@ All screenshots were captured **during execution** to demonstrate how the system
 **Result:** The VM is provisioned and running in Azure.
 
 ![Azure VM created](images/step-01-azure-vm/step-01-azure-vm-created.png.png)
+
 ![Azure VM Basics Tab](images/step-01-azure-vm/step-01-basics-tab.png.png)
+
 ![Resource Group](images/step-01-azure-vm/step-01-resource-group.png.png)
+
 ![VM Name](images/step-01-azure-vm/step-01-vm-name.png.png)
+
 ![Region](images/step-01-azure-vm/step-01-region.png.png)
+
 ![Image](images/step-01-azure-vm/step-01-image.png.png)
+
 ![Size](images/step-01-azure-vm/step-01-size.png.png)
+
 ![Admin Account](images/step-01-azure-vm/step-01-admin-account.png.png)
+
 ![Deployment Complete](images/step-01-azure-vm/step-01-deployment-complete.png.png)
 
 ---
@@ -89,7 +97,9 @@ All screenshots were captured **during execution** to demonstrate how the system
 **Result:** An active Remote Desktop session showing the Windows 11 desktop of the Azure VM.
 
 ![Connected to VM via RDP](images/step-02-rdp/step-02-rdp-connection.png.png)
+
 ![Public IP Address RDP Connection](images/step-02-rdp/step-02-rdp-connected.png.png)
+
 ![Proof of Connecting to VM](images/step-02-rdp/step-02-windows-desktop.png.png)
 
 ---
@@ -110,8 +120,11 @@ All screenshots were captured **during execution** to demonstrate how the system
 **Result:** The osTicket files are extracted locally on the VM, ready for deployment.
 
 ![osTicket installation files extracted](images/step-03-download/step-03-download-files.png.png)
+
 ![osTicket installation zip downloaded](images/step-03-download/step-03-download-zip.png.png)
+
 ![Extracting osTicket installation files](images/step-03-download/step-03-extract.png.png)
+
 ![osTicket folders extracted](images/step-03-download/step-03-folder-contents.png.png)
 
 ---
