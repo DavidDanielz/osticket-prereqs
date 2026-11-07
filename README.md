@@ -229,6 +229,8 @@ All screenshots were captured **during execution** to demonstrate how the system
 
 ![Microsoft Visual C++ Redistributable installed](images/step-07-vcredist/step-07-vcredist-install.png.png)
 
+![MySQL Server Root Password](images/step-07-vcredist/step-07-mysql-password.png.png)
+
 ---
 
 ### Step 8: Install MySQL Server
