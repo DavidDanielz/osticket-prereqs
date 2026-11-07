@@ -144,10 +144,6 @@ All screenshots were captured **during execution** to demonstrate how the system
 
 **Result:** IIS is installed with CGI enabled, ready to host PHP.
 
-![IIS role selected in Server Manager](images/step-04-iis/step-04-iis-role-selected.png.png)
-
-![CGI checked under Application Development Features](images/step-04-iis/step-04-iis-cgi-checked.png.png)
-
 ![Search for Control Panel](images/step-04-iis/step-04-search-control-panel.png.png)
 
 ![Click Uninstall a program](images/step-04-iis/step-04-click-programs.png.png)
@@ -159,6 +155,10 @@ All screenshots were captured **during execution** to demonstrate how the system
 ![Check CGI](images/step-04-iis/step-04-iis-cgi-checked.png.png)
 
 ![Windows completed the requested changes](images/step-04-iis/step-04-install-complete.png.png)
+
+![IIS role selected in Server Manager](images/step-04-iis/step-04-iis-role-selected.png.png)
+
+![CGI checked under Application Development Features](images/step-04-iis/step-04-iis-cgi-checked.png.png)
 
 ---
 
