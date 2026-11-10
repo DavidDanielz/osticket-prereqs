@@ -304,15 +304,15 @@ All screenshots were captured **during execution** to demonstrate how the system
 4. In the address bar, navigate to `C:\inetpub\wwwroot\`.
 5. Right-click in the empty space and select **Paste**. Confirm `C:\inetpub\wwwroot\upload\` now exists.
 
-![Copying the upload folder to wwwroot](images/step-10-deploy-files/step-10-upload-to-wwwroot.png)
+![Copying the upload folder to wwwroot](images/step-10-deploy-files/step-10-upload-to-wwwroot.png.png)
 
 6. Right-click the `upload` folder inside `wwwroot` → **Rename** → change it to `osTicket`.
 
-![Renaming upload to osTicket](images/step-10-deploy-files/step-10-rename-to-osticket.png)
+![Renaming upload to osTicket](images/step-10-deploy-files/step-10-rename-to-osticket.png.png)
 
 7. Confirm the path is now `C:\inetpub\wwwroot\osTicket\` and that all application files (api, assets, include, etc.) are inside.
 
-![Upload folder present in wwwroot](images/step-10-deploy-files/step-10-upload-in-wwwroot.png)
+![Upload folder present in wwwroot](images/step-10-deploy-files/step-10-upload-in-wwwroot.png.png)
 
 **Result:** osTicket application files are deployed at `C:\inetpub\wwwroot\osTicket\`, ready for the web installer.
 
