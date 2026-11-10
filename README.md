@@ -239,15 +239,16 @@ All screenshots were captured **during execution** to demonstrate how the system
 
 **Procedure:**
 
-1. Inside the RDP session, download the **MySQL Server 5.5** installer.
-2. Run the installer and click **Next** through the welcome screen.
-3. Accept the license agreement → **Next**.
-4. Choose **Typical** setup type → **Install**.
-5. Wait for installation to complete → **Next** → **Finish**.
-6. When the configuration wizard launches, select **Standard Configuration** → **Next**.
-7. Check **Install As Windows Service** (leave the default service name `MySQL`) → **Next**.
-8. Set a **root password** (save it — needed later for HeidiSQL) → **Next** → **Execute**.
-9. Click **Finish** once configuration completes.
+1. Inside the RDP session, open Microsoft Edge and navigate to the MySQL Community Downloads archive to locate the **MySQL Server 5.5** installer (`.msi`).
+2. Once the download is complete, double-click the `.msi` file to launch the setup wizard.
+3. On the **Welcome** screen, click **Next** to begin the installation.
+4. Accept the license agreement terms and click **Next**.
+5. On the Setup Type screen, select **Typical** and click **Install**.
+6. Wait for the progress bar to complete, then click **Next** and **Finish**.
+7. The MySQL Configuration Wizard will launch automatically. Select **Standard Configuration** and click **Next**.
+8. Check the box for **Install As Windows Service** (leave the default service name as `MySQL`). Ensure "Launch the MySQL Server automatically" is checked, then click **Next**.
+9. Set a secure **root password** (make sure to save this securely, as it will be needed later for HeidiSQL) and click **Next**.
+10. Click **Execute** to apply the configuration. Once all checkmarks turn green, click **Finish**.
 
 **Result:** MySQL Server is installed, running as a Windows service, with a known root password.
 
@@ -261,13 +262,27 @@ All screenshots were captured **during execution** to demonstrate how the system
 
 **Procedure:**
 
-1. Inside the RDP session, open **IIS Manager** (`inetmgr`).
-2. Click the server name in the left tree.
-3. In the center pane, double-click **PHP Manager**.
-4. Click **Register new PHP version**.
-5. In the dialog, click the **`…`** button and browse to `C:\PHP\php-cgi.exe`.
-6. Click **OK** to register.
-7. Confirm the PHP version now appears in PHP Manager.
+1. Inside the RDP session, open the Windows Start menu and search for **Internet Information Services (IIS) Manager**. Right-click it and select **Run as administrator** to launch the console.
+
+![Opening IIS Manager from Start Menu](images/step-08-mysql/step-08-open-iis.png.png)
+
+2. In the IIS Manager window, click on the server name (e.g., `osTicket-VM`) in the left-hand **Connections** tree.
+3. Expand **Sites** → **Default Web Site**, and click on the **osTicket** folder to select it.
+4. In the center **Features View** pane, double-click the **PHP Manager** icon.
+
+![IIS Manager showing osTicket Home with PHP Manager icon](images/step-09-register-php/step-09-iis-osticket-home.png.png)
+
+5. You will see a warning stating "PHP is not enabled." Click the **Register new PHP version** link.
+
+![PHP Manager interface showing PHP is not enabled](images/step-08-mysql/step-08-php-manager-popup.png.png)
+
+6. A popup window will appear asking for the path to the `php-cgi.exe` file. Click the **`...`** (browse) button.
+7. In the file explorer window, navigate to `C:\PHP\`, select the `php-cgi.exe` application file, and click **Open**.
+
+![Selecting php-cgi.exe from the C:\PHP directory](images/step-08-mysql/step-08-select-php.png.png)
+
+8. Click **OK** to close the popup and register the version.
+9. Refresh the PHP Manager page to confirm that PHP 7.3.8 is now listed and the warning is gone.
 
 **Result:** PHP 7.3.8 is registered with IIS and listed in PHP Manager.
 
