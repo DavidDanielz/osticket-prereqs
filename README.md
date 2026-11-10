@@ -299,20 +299,22 @@ All screenshots were captured **during execution** to demonstrate how the system
 **Procedure:**
 
 1. Inside the RDP session, open **File Explorer**.
-2. Navigate to the extracted osTicket folder (from Step 3).
-3. Copy the `upload` folder.
-4. Paste it into `C:\inetpub\wwwroot\`.
-5. Confirm `C:\inetpub\wwwroot\upload\` now exists.
-6. Right-click the `upload` folder → **Rename** → change it to `osTicket`.
-7. Confirm the path is now `C:\inetpub\wwwroot\osTicket\`.
+2. Navigate to the extracted osTicket folder (from Step 3) located at `C:\Users\labuser\Downloads\osTicket-Installation-Files\osTicket-v1.15.8\`.
+3. Right-click the `upload` folder and select **Copy**.
+4. In the address bar, navigate to `C:\inetpub\wwwroot\`.
+5. Right-click in the empty space and select **Paste**. Confirm `C:\inetpub\wwwroot\upload\` now exists.
+
+![Copying the upload folder to wwwroot](images/step-10-deploy-files/step-10-upload-to-wwwroot.png)
+
+6. Right-click the `upload` folder inside `wwwroot` → **Rename** → change it to `osTicket`.
+
+![Renaming upload to osTicket](images/step-10-deploy-files/step-10-rename-to-osticket.png)
+
+7. Confirm the path is now `C:\inetpub\wwwroot\osTicket\` and that all application files (api, assets, include, etc.) are inside.
+
+![Upload folder present in wwwroot](images/step-10-deploy-files/step-10-upload-in-wwwroot.png)
 
 **Result:** osTicket application files are deployed at `C:\inetpub\wwwroot\osTicket\`, ready for the web installer.
-
-![Copying the upload folder to wwwroot](images/step-10-deploy-files/step-10-upload-to-wwwroot.png.png)
-
-![Upload folder present in wwwroot](images/step-10-deploy-files/step-10-upload-in-wwwroot.png.png)
-
-![Renaming upload to osTicket](images/step-10-deploy-files/step-10-rename-to-osticket.png.png)
 
 ---
 
