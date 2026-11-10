@@ -270,7 +270,7 @@ All screenshots were captured **during execution** to demonstrate how the system
 3. Expand **Sites** → **Default Web Site**, and click on the **osTicket** folder to select it.
 4. In the center **Features View** pane, double-click the **PHP Manager** icon.
 
-![IIS Manager showing osTicket Home with PHP Manager icon](images/step-09-register-php/step-09-iis-osticket-home.png.png)
+![IIS Manager showing osTicket Home with PHP Manager icon](images/step-09-register-php/step-09-osticket-home.png.png)
 
 5. You will see a warning stating "PHP is not enabled." Click the **Register new PHP version** link.
 
