@@ -299,7 +299,7 @@ All screenshots were captured **during execution** to demonstrate how the system
 **Procedure:**
 
 1. Inside the RDP session, open **File Explorer**.
-2. Navigate to the extracted osTicket folder (from Step 3) located at `C:\Users\labuser\Downloads\osTicket-Installation-Files\osTicket-v1.15.8\`.
+2. Navigate to the extracted osTicket folder located at `C:\Users\labuser\Downloads\osTicket-Installation-Files\osTicket-v1.15.8\`.
 3. Right-click the `upload` folder and select **Copy**.
 4. In the address bar, navigate to `C:\inetpub\wwwroot\`.
 5. Right-click in the empty space and select **Paste**. Confirm `C:\inetpub\wwwroot\upload\` now exists.
@@ -320,16 +320,16 @@ All screenshots were captured **during execution** to demonstrate how the system
 
 ### Step 11: Launch osTicket Web Installer
 
-**Goal:** Open the osTicket setup page in a browser and review the prerequisite checks.
+**Goal:** Open the osTicket setup page in a web browser and review the prerequisite checks.
 
 **Procedure:**
 
-1. Inside the RDP session, open Microsoft Edge.
-2. Navigate to `http://localhost/osTicket/setup/`.
-3. Review the **Prerequisites** list shown on the page.
-4. Note any items marked as **failed** or **missing** (e.g. PHP extensions) — these will be fixed in Step 12.
+1. Inside the RDP session, open **Microsoft Edge**.
+2. In the address bar, type the exact URL of your newly deployed folder: `http://localhost/osTicket/setup/` and press Enter.
+3. Review the **Prerequisites** list shown on the installer page.
+4. Note the items marked with a red **X** (e.g., PHP IMAP Extension, Intl Extension). These are required or recommended extensions that are currently missing and will be fixed in Step 12.
 
-**Result:** The osTicket installer page loads and displays the prerequisite checklist, with warnings visible for items needing correction.
+**Result:** The osTicket web installer launches successfully and displays the prerequisite checklist, highlighting missing PHP extensions.
 
 ![osTicket installer prerequisites with warnings](images/step-11-web-installer/step-11-installer-prereqs-warnings.png.png)
 
