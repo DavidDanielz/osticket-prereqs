@@ -320,7 +320,7 @@ All screenshots were captured **during execution** to demonstrate how the system
 
 ### Step 11: Launch osTicket Web Installer
 
-**Goal:** Open the osTicket setup page in a web browser and review the prerequisite checks.
+**Goal:** Open the osTicket setup page in a web browser to review the prerequisite checks.
 
 **Procedure:**
 
@@ -329,9 +329,9 @@ All screenshots were captured **during execution** to demonstrate how the system
 3. Review the **Prerequisites** list shown on the installer page.
 4. Note the items marked with a red **X** (e.g., PHP IMAP Extension, Intl Extension). These are required or recommended extensions that are currently missing and will be fixed in Step 12.
 
-**Result:** The osTicket web installer launches successfully and displays the prerequisite checklist, highlighting missing PHP extensions.
+![osTicket installer prerequisites with warnings](images/step-10-deploy-files/step-10-installer-warnings.png.png)
 
-![osTicket installer prerequisites with warnings](images/step-11-web-installer/step-11-installer-prereqs-warnings.png.png)
+**Result:** The osTicket web installer launches successfully and displays the prerequisite checklist, highlighting missing PHP extensions.
 
 ---
 
