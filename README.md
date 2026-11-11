@@ -514,7 +514,7 @@ All screenshots were captured **during execution** to demonstrate how the system
 
 6. Once logged in, verify that the Admin Dashboard loads successfully and shows the "osTicket Installed!" ticket.
 
-![osTicket admin dashboard showing installed ticket](images/step-15-install-complete/step-15-install-success.png.png)
+![osTicket admin dashboard showing installed ticket](images/step-15-install-complete/step-15-ticket-dashboard.png.png)
 
 **Result:** The osTicket support portal and staff control panel are both accessible, confirming a complete and working installation.
 
