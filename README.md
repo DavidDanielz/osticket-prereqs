@@ -341,18 +341,30 @@ All screenshots were captured **during execution** to demonstrate how the system
 
 **Procedure:**
 
-1. Inside the RDP session, open **IIS Manager** → **PHP Manager**.
-2. Click **Enable or disable an extension**.
-3. Enable the extensions osTicket requires (typically `php_imap.dll`, `php_intl.dll`, `php_ldap.dll`, `php_mbstring.dll`, `php_openssl.dll`, and `php_gd2.dll`).
-4. Click **Apply**.
-5. Alternatively, edit `C:\PHP\php.ini` directly: uncomment the matching `extension=…` lines (remove the leading `;`).
-6. Restart IIS: open an elevated Command Prompt and run `iisreset`.
-7. Return to the browser and refresh `http://localhost/osTicket/setup/`.
-8. Confirm all prerequisites now show as **passed** (green).
+1. Inside the RDP session, return to **Internet Information Services (IIS) Manager**.
+2. In the left-hand tree, click on the **osTicket** folder. In the center pane, double-click the **PHP Manager** icon.
+
+![PHP Manager interface](images/step-10-deploy-files/step-10-php-manager.png.png)
+
+3. Under the PHP Extensions section, click the **Enable or disable an extension** link.
+
+![PHP Extensions menu](images/step-10-deploy-files/step-10-enable-extensions.png.png)
+
+4. Locate the missing extensions (such as `php_imap.dll` and `php_intl.dll`). Right-click on `php_imap.dll` and select **Enable**.
+
+![Enabling php_imap.dll](images/step-10-deploy-files/step-10-enable-imap.png.png)
+
+5. Repeat this process to enable `php_intl.dll`, `php_ldap.dll`, and `php_gd2.dll`. 
+6. Verify that all required extensions now show a state of **Enabled**.
+
+![Extensions successfully enabled in PHP Manager](images/step-10-deploy-files/step-10-extensions-enabled.png.png)
+
+7. Return to the Microsoft Edge browser and refresh the `http://localhost/osTicket/setup/` page.
+8. Confirm that all the previously missing prerequisites now show as **passed** (green checkmarks).
+
+![osTicket installer after refreshing — all extensions enabled](images/step-10-deploy-files/step-10-installer-success.png.png)
 
 **Result:** All required PHP extensions are enabled and the installer's prerequisite checklist passes.
-
-![osTicket installer after refreshing — extensions enabled](images/step-12-php-extensions/step-12-extensions-enabled.png.png)
 
 ---
 
@@ -363,16 +375,43 @@ All screenshots were captured **during execution** to demonstrate how the system
 **Procedure:**
 
 1. Inside the RDP session, open File Explorer and navigate to `C:\inetpub\wwwroot\osTicket\include\`.
-2. Locate `ost-sampleconfig.php`.
-3. Rename it to `ost-config.php`.
-4. Right-click `ost-config.php` → **Properties** → **Security** → **Advanced**.
-5. Click **Change** next to Owner → set the owner to `Administrators`.
-6. In the permissions list, grant **Full control** to `Users` (temporary, for the installer).
-7. Click **OK** on each dialog to apply.
+2. Locate the file named `ost-sampleconfig.php`.
+
+![Locating the sample config file](images/step-11-web-installer/step-11-sample-config.png.png)
+
+3. Right-click `ost-sampleconfig.php` and select **Rename**. Change the name to `ost-config.php`.
+
+![Renaming the config file](images/step-11-web-installer/step-11-renamed-config.png.png)
+
+4. Right-click `ost-config.php` and select **Properties**.
+
+![Opening file properties](images/step-11-web-installer/step-11-properties.png.png)
+
+5. Navigate to the **Security** tab.
+
+![Security tab for ost-config.php](images/step-11-web-installer/step-11-security-tab.png.png)
+
+6. Click the **Advanced** button to view the current inherited permissions.
+
+![Advanced Security settings showing inherited permissions](images/step-13-config-file/step-13-config-permissions.png.png)
+
+7. Click **Disable inheritance**, and choose **Convert inherited permissions into explicit permissions on this object**.
+
+![Disabling inheritance](images/step-11-web-installer/step-11-block-inheritance.png.png)
+
+8. Click **Add**, type `Everyone`, and click **OK**.
+
+![Selecting Everyone](images/step-11-web-installer/step-11-select-everyone.png.png)
+
+9. Check the box for **Full control** and click **OK**.
+
+![Granting Full control](images/step-11-web-installer/step-11-full-control.png.png)
+
+10. Click **Apply** and **OK** on all remaining dialogs to save the permissions.
+
+![Permissions successfully applied](images/step-11-web-installer/step-11-permissions-applied.png.png)
 
 **Result:** `ost-config.php` exists and is writable by IIS, allowing the installer to write database credentials into it.
-
-![Advanced Security settings for ost-config.php](images/step-13-config-file/step-13-config-permissions.png.png)
 
 ---
 
@@ -382,26 +421,45 @@ All screenshots were captured **during execution** to demonstrate how the system
 
 **Procedure:**
 
-1. Inside the RDP session, launch **HeidiSQL**.
-2. In the session manager, create a new session:
+1. Inside the RDP session, launch the **HeidiSQL** installer. Accept the license agreement and proceed with the installation.
+
+![HeidiSQL License Agreement](images/step-12-php-extensions/step-12-heidisql-license.png.png)
+
+2. Once installed and launched, you will be greeted by the **Session Manager**. Click **New** to create a new connection.
+
+![HeidiSQL Session Manager](images/step-12-php-extensions/step-12-session-manager.png.png)
+
+3. Configure the session settings:
+   - **Network type:** MariaDB or MySQL (TCP/IP)
    - **Hostname / IP:** `127.0.0.1`
    - **User:** `root`
    - **Password:** (the MySQL root password set in Step 8)
    - **Port:** `3306`
-3. Click **Open** to connect.
-4. In the query tab, run:
-   ```sql
-   CREATE DATABASE osticket;
-   CREATE USER 'osticket'@'localhost' IDENTIFIED BY 'Str0ngP@ssw0rd!';
-   GRANT ALL PRIVILEGES ON osticket.* TO 'osticket'@'localhost';
-   FLUSH PRIVILEGES;
-   ```
-5. Right-click the left pane → **Refresh**.
-6. Confirm the **osticket** database now appears in the tree.
+4. Click **Open** to connect to the database.
 
-**Result:** The `osticket` database exists and the `osticket` user has full privileges on it, ready for the installer.
+![HeidiSQL Connection Settings](images/step-12-php-extensions/step-12-connection.png.png)
 
-![HeidiSQL showing osticket database created](images/step-14-heidisql-db/step-14-heidisql-tables-created.png.png)
+5. In the left-hand pane, right-click on your connection name and select **Create new** → **Database**.
+
+![Creating a new database](images/step-12-php-extensions/step-12-create-db.png.png)
+
+6. Name the database `osTicket` (or `osticket`) and click **OK**.
+
+![Naming the database](images/step-12-php-extensions/step-12-name-db.png.png)
+
+7. Verify the database appears in the left-hand pane.
+
+![Database successfully created](images/step-12-php-extensions/step-12-databases.png.png)
+
+8. Click on the `osTicket` database. It will initially be empty.
+
+![Empty database view](images/step-12-php-extensions/step-12-empty-db.png.png)
+
+9. (Optional) If you need to view the database connection details within the web installer, ensure the fields are ready to be filled.
+
+![Database settings in the installer](images/step-14-heidisql-db/step-14-db-settings-empty.png.png)
+
+**Result:** The `osTicket` database is created and ready for the installer to populate with tables.
 
 ---
 
@@ -412,45 +470,53 @@ All screenshots were captured **during execution** to demonstrate how the system
 **Procedure:**
 
 1. Return to the browser at `http://localhost/osTicket/setup/`.
-2. Scroll to the **System Settings** section and fill in:
-   - **Helpdesk Name:** `osTicket Lab`
-   - **Default Email:** your admin email address
-3. Scroll to the **Admin User** section and fill in:
-   - **First Name / Last Name**
-   - **Email Address**
-   - **Username:** `system_admin`
-   - **Password:** (strong password, saved securely)
-4. Scroll to the **Database Settings** section and enter:
+2. Scroll down to the **System Settings** section and fill in:
+   - **Helpdesk Name:** `David's Help Desk`
+   - **Default Email:** Your admin email address
+3. In the **Admin User** section, fill in your first name, last name, email, username (e.g., `AdminUser`), and a strong password.
+4. In the **Database Settings** section, enter:
    - **MySQL Hostname:** `localhost`
-   - **MySQL Database:** `osticket`
-   - **MySQL Username:** `osticket`
-   - **MySQL Password:** (the password set in Step 14)
+   - **MySQL Database:** `osTicket`
+   - **MySQL Username:** `root`
+   - **MySQL Password:** (the root password set in Step 8)
 5. Click **Install Now**.
-6. Wait for the installer to finish, then confirm the success page appears.
-
-**Result:** osTicket is installed successfully and the admin account and database are configured.
 
 ![osTicket installer form filled with admin and database settings](images/step-15-install-complete/step-15-installer-form-filled.png.png)
 
+6. Wait for the installer to finish, then confirm the success page appears.
+
 ![osTicket installation success page](images/step-15-install-complete/step-15-install-success.png.png)
+
+7. The success page provides useful links for your Helpdesk URL and Staff Control Panel. 
+
+![Useful links post-installation](images/step-13-config-file/step-13-useful-links.png.png)
+
+**Result:** osTicket is installed successfully and the admin account and database are configured. *Note: You must now remove write access from `ost-config.php` as instructed on the success page.*
 
 ---
 
-### Step 16: Verify End-User Portal
+### Step 16: Verify End-User Portal & Staff Login
 
-**Goal:** Confirm the osTicket support portal loads correctly and can accept tickets.
+**Goal:** Confirm the osTicket support portal loads correctly and the admin can log in.
 
 **Procedure:**
 
 1. Inside the RDP session, open Microsoft Edge.
 2. Navigate to `http://localhost/osTicket/`.
 3. Confirm the **Support Center** page loads with the help desk name shown.
-4. Click **Open a New Ticket** and confirm the ticket submission form appears.
-5. (Optional) Navigate to `http://localhost/osTicket/scp/` and log in with the admin account to confirm the staff control panel loads.
-
-**Result:** The osTicket support portal and staff control panel are both accessible, confirming a complete and working installation.
 
 ![osTicket support center portal](images/step-16-support-portal/step-16-support-portal.png.png)
+
+4. Navigate to the Staff Control Panel at `http://localhost/osTicket/scp/`. 
+5. Log in with the admin credentials created during the installation.
+
+![osTicket staff login screen](images/step-13-config-file/step-13-staff-login.png.png)
+
+6. Once logged in, verify that the Admin Dashboard loads successfully and shows the "osTicket Installed!" ticket.
+
+![osTicket admin dashboard showing installed ticket](images/step-15-install-complete/step-15-ticket-dashboard.png.png)
+
+**Result:** The osTicket support portal and staff control panel are both accessible, confirming a complete and working installation.
 
 ---
 
