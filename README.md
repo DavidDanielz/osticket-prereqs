@@ -455,6 +455,10 @@ All screenshots were captured **during execution** to demonstrate how the system
 
 ![Empty database view](images/step-12-php-extensions/step-12-empty-db.png.png)
 
+9. (Optional) If you need to view the database connection details within the web installer, ensure the fields are ready to be filled.
+
+![Database settings in the installer](images/step-14-heidisql-db/step-14-db-settings-empty.png.png)
+
 **Result:** The `osTicket` database is created and ready for the installer to populate with tables.
 
 ---
